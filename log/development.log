@@ -693,3 +693,48 @@ Processing by SessionsController#create as HTML
 Completed 200 OK in 28ms (Views: 20.9ms | ActiveRecord: 0.6ms | Allocations: 6187)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? AND "departments"."name" = ? LIMIT ?[0m  [["id", 1], ["name", "総務部"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDepartment Create (0.4ms)[0m  [1m[32mINSERT INTO "departments" ("id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 1], ["name", "総務部"], ["created_at", "2022-05-28 02:58:55.108598"], ["updated_at", "2022-05-28 02:58:55.108598"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? AND "departments"."name" = ? LIMIT ?[0m  [["id", 2], ["name", "技術部"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDepartment Create (0.4ms)[0m  [1m[32mINSERT INTO "departments" ("id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 2], ["name", "技術部"], ["created_at", "2022-05-28 02:58:55.115578"], ["updated_at", "2022-05-28 02:58:55.115578"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? AND "departments"."name" = ? LIMIT ?[0m  [["id", 3], ["name", "営業部"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDepartment Create (0.4ms)[0m  [1m[32mINSERT INTO "departments" ("id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 3], ["name", "営業部"], ["created_at", "2022-05-28 02:58:55.144576"], ["updated_at", "2022-05-28 02:58:55.144576"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOffice Load (0.1ms)[0m  [1m[34mSELECT "offices".* FROM "offices" WHERE "offices"."id" = ? AND "offices"."name" = ? LIMIT ?[0m  [["id", 1], ["name", "東京"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOffice Create (0.3ms)[0m  [1m[32mINSERT INTO "offices" ("id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 1], ["name", "東京"], ["created_at", "2022-05-28 02:58:55.161867"], ["updated_at", "2022-05-28 02:58:55.161867"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOffice Load (0.1ms)[0m  [1m[34mSELECT "offices".* FROM "offices" WHERE "offices"."id" = ? AND "offices"."name" = ? LIMIT ?[0m  [["id", 2], ["name", "仙台"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOffice Create (0.3ms)[0m  [1m[32mINSERT INTO "offices" ("id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 2], ["name", "仙台"], ["created_at", "2022-05-28 02:58:55.168523"], ["updated_at", "2022-05-28 02:58:55.168523"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOffice Load (0.1ms)[0m  [1m[34mSELECT "offices".* FROM "offices" WHERE "offices"."id" = ? AND "offices"."name" = ? LIMIT ?[0m  [["id", 3], ["name", "大阪"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOffice Create (0.3ms)[0m  [1m[32mINSERT INTO "offices" ("id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 3], ["name", "大阪"], ["created_at", "2022-05-28 02:58:55.174454"], ["updated_at", "2022-05-28 02:58:55.174454"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOffice Load (0.2ms)[0m  [1m[34mSELECT "offices".* FROM "offices" WHERE "offices"."id" = ? AND "offices"."name" = ? LIMIT ?[0m  [["id", 4], ["name", "福岡"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOffice Create (0.3ms)[0m  [1m[32mINSERT INTO "offices" ("id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 4], ["name", "福岡"], ["created_at", "2022-05-28 02:58:55.180643"], ["updated_at", "2022-05-28 02:58:55.180643"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOffice Load (0.1ms)[0m  [1m[34mSELECT "offices".* FROM "offices" WHERE "offices"."id" = ? AND "offices"."name" = ? LIMIT ?[0m  [["id", 5], ["name", "大分"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOffice Create (0.4ms)[0m  [1m[32mINSERT INTO "offices" ("id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 5], ["name", "大分"], ["created_at", "2022-05-28 02:58:55.185578"], ["updated_at", "2022-05-28 02:58:55.185578"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."name" = ? LIMIT ?[0m  [["name", "総務部"], ["LIMIT", 1]]
+  [1m[36mOffice Load (0.2ms)[0m  [1m[34mSELECT "offices".* FROM "offices" WHERE "offices"."name" = ? LIMIT ?[0m  [["name", "東京"], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? AND "employees"."department_id" = ? AND "employees"."office_id" = ? AND "employees"."number" = ? AND "employees"."last_name" = ? AND "employees"."first_name" = ? AND "employees"."account" = ? AND "employees"."password" = ? AND "employees"."email" = ? AND "employees"."date_of_joining" = ? AND "employees"."employee_info_manage_auth" = ? LIMIT ?[0m  [["id", 1], ["department_id", 1], ["office_id", 1], ["number", "1"], ["last_name", "山田"], ["first_name", "太郎"], ["account", "yamada"], ["password", "hogehoge"], ["email", "yamada@example.co.jp"], ["date_of_joining", "1991-04-01"], ["employee_info_manage_auth", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOffice Load (0.2ms)[0m  [1m[34mSELECT "offices".* FROM "offices" WHERE "offices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."number" = ? LIMIT ?[0m  [["number", "1"], ["LIMIT", 1]]
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."account" = ? LIMIT ?[0m  [["account", "yamada"], ["LIMIT", 1]]
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("id", "department_id", "office_id", "number", "last_name", "first_name", "account", "password", "email", "date_of_joining", "employee_info_manage_auth", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["department_id", 1], ["office_id", 1], ["number", "1"], ["last_name", "山田"], ["first_name", "太郎"], ["account", "yamada"], ["password", "hogehoge"], ["email", "yamada@example.co.jp"], ["date_of_joining", "1991-04-01"], ["employee_info_manage_auth", 1], ["created_at", "2022-05-28 02:58:55.238739"], ["updated_at", "2022-05-28 02:58:55.238739"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
