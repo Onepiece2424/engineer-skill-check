@@ -40,3 +40,44 @@
     border: 1px solid;
   }
 }
+
+.employee_index {
+  .new_employee {
+    text-align: right;
+    margin-right: 31px;
+  }
+
+  .btn {
+    border: 1px solid;
+    padding: 3px 5px;
+  }
+
+  .employee_table {
+    height: fit-content;
+    width: 700px;
+    table-layout: fixed;
+    margin-top: 20px;
+
+    thead {
+      line-height: 50px;
+
+      .department_th {
+        width: 90px;
+      }
+    }
+
+    .title {
+      text-align: left;
+      width: 350px;
+      padding-left: 50px;
+    }
+
+    .employee {
+      line-height: 30px;
+
+      .btn_th {
+        display: inline-block;
+      }
+    }
+  }
+}
