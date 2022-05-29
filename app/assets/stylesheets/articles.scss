@@ -1,3 +1,42 @@
-// Place all the styles related to the Articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.article_form {
+  position: relative;
+  margin-top: 60px;
+
+  .form_group {
+    display: flex;
+    line-height: 2.4em;
+
+    input[type="text"] {
+      width: 600px;
+      height: 23px;
+    }
+
+    label {
+      display: inline-block;
+      width: 120px;
+    }
+
+    input {
+      width: 150px;
+      margin-right: 20px;
+      margin-top: 5px;
+    }
+
+    select {
+      height: 29px;
+      width: 158px;
+      padding-left: 12px;
+      margin-top: 5px;
+      border-radius: 6px;
+    }
+  }
+
+  input[type="submit"]{
+    position: absolute;
+    top: -38px;
+    right: 20px;
+    padding: 0px 22px;
+    background-color: white;
+    border: 1px solid;
+  }
+}
