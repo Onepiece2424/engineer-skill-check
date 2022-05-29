@@ -11,7 +11,10 @@
     <tbody>
     <% @articles.each do |article| %>
       <tr class="employee">
-        <th class="title"><%= article.title %><%= l article.created_at %></th>
+        <th class="title">
+          <%= link_to article.title, article_path(article.id) %>
+          <%= l article.created_at %>
+        </th>
         <th class="title"><%= link_to "編集", edit_article_path(article.id) %></th>
         <th class="title"><%= button_to "削除", article_path(article.id), method: :delete %></th>
       </tr>
