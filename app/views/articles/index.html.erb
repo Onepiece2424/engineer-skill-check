@@ -10,7 +10,9 @@
     </thead>
     <tbody>
     <% @articles.each do |article| %>
-      <%= article.title %>
+      <tr class="employee">
+        <th class="title"><%= article.title %></th>
+      </tr>
     <% end %>
     </tbody>
   </table>
