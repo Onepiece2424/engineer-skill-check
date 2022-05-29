@@ -1,0 +1,5 @@
+<div class="profile_space">
+  <p class="employee_index"><%= link_to '一覧に戻る', articles_path, class: 'btn' %></p>
+
+  <%= render partial: 'article_info', locals: { article: @article } %>
+</div>
