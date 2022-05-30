@@ -66,7 +66,7 @@ class EmployeesController < ApplicationController
       @employee.email = 'sample@example.com'
     end
     unless @employee.date_of_joining
-      @employee.date_of_joining = Date.today
+      @employee.date_of_joining = Time.zone.today
     end
   end
 
