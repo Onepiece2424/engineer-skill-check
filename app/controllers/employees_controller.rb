@@ -37,9 +37,9 @@ class EmployeesController < ApplicationController
 
   def destroy
     ActiveRecord::Base.transaction do
-      now = Time.now
-      @employee.update_column(:deleted_at, now)
-      @employee.profiles.active.first.update_column(:deleted_at, now) if @employee.profiles.active.present?
+      now = Time.zone.now
+      @employee.update(:deleted_at, now)
+      @employee.profiles.active.first.update(:deleted_at, now) if @employee.profiles.active.present?
     end
 
     redirect_to employees_url, notice: "社員「#{@employee.last_name} #{@employee.first_name}」を削除しました。"
@@ -66,7 +66,7 @@ class EmployeesController < ApplicationController
       @employee.email = 'sample@example.com'
     end
     unless @employee.date_of_joining
-      @employee.date_of_joining = Date.today
+      @employee.date_of_joining = Time.zone.today
     end
   end
 
