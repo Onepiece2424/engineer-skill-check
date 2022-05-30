@@ -64,7 +64,8 @@ tr {
 }
 
 #dropdown_menu {
-  display: none;
+  text-align: right;
+  font-size: 20px;
 }
 
 #dropdown_menu ul {
@@ -106,4 +107,3 @@ tr {
   background: none;
   border: 0;
 }
-
