@@ -36,12 +36,8 @@ class EmployeesController < ApplicationController
   end
 
   def destroy
-    ActiveRecord::Base.transaction do
-      now = Time.zone.now
-      @employee.update(:deleted_at, now)
-      @employee.profiles.active.first.update(:deleted_at, now) if @employee.profiles.active.present?
-    end
-
+    @employee = Employee.find(params[:id])
+    @employee.destroy
     redirect_to employees_url, notice: "社員「#{@employee.last_name} #{@employee.first_name}」を削除しました。"
   end
 
