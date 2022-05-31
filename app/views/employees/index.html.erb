@@ -31,7 +31,7 @@
         <th><%= employee.department.name %></th>
         <% if current_user.employee_info_manage_auth %>
           <th class="btn_th"><%= link_to '編集', edit_employee_path(employee), class: 'btn' %></th>
-          <th class="btn_th"><%= link_to '削除', employee, method: :delete, data: { confirm: "社員「#{employee.first_name} #{employee.last_name}」を削除します。よろしいですか？" }, class: 'btn' %></th>
+          <th class="btn_th"><%= link_to '削除', employee_path(employee.id), method: :delete, data: { confirm: "社員「#{employee.first_name} #{employee.last_name}」を削除します。よろしいですか？" }, class: 'btn' %></th>
         <% end %>
       </tr>
     <% end %>
