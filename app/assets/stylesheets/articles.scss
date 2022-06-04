@@ -23,6 +23,22 @@
     }
   }
 
+  .form_group_content {
+    display: flex;
+    line-height: 2.4em;
+
+    input[type="text"] {
+      width: 720px;
+      height: 400px;
+    }
+
+    input {
+      width: 150px;
+      margin-right: 20px;
+      margin-top: 20px;
+    }
+  }
+
   input[type="submit"]{
     position: absolute;
     top: -38px;
