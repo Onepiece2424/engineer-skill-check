@@ -37,6 +37,7 @@ ja:
         profile: プロフィール
       article:
         title: タイトル
+        content: コンテンツ
   time:
       formats:
         default: "%Y/%m/%d"
