@@ -6,6 +6,7 @@
  //= require jquery
 //= require turbolinks
 //= require_tree .
+//= require bootstrap
 
 import Rails from "@rails/ujs"
 import * as ActiveStorage from "@rails/activestorage"
