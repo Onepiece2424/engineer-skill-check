@@ -26,6 +26,20 @@ Employee.create!(
                             number: '2', last_name: '田中', first_name: '一郎', account: 'tanaka',
                             password: 'hugahuga', email: 'tanaka@example.co.jp', date_of_joining: '1992/4/1',
                             employee_info_manage_auth: true, news_posting_auth: true
+    },
+    {
+      department_id: Department.find_by(name: '技術部').id,
+                            office_id: Office.find_by(name: '東京').id,
+                            number: '3', last_name: '佐藤', first_name: '二郎', account: 'sato',
+                            password: 'satosato', email: 'sato@example.co.jp', date_of_joining: '1993/4/1',
+                            employee_info_manage_auth: true, news_posting_auth: false
+    },
+    {
+      department_id: Department.find_by(name: '営業部').id,
+                            office_id: Office.find_by(name: '東京').id,
+                            number: '4', last_name: '高橋', first_name: '三郎', account: 'takahashi',
+                            password: 'takataka', email: 'takahashi@example.co.jp', date_of_joining: '1994/4/1',
+                            employee_info_manage_auth: false, news_posting_auth: true
     }
   ]
 )
