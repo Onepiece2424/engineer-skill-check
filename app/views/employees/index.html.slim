@@ -1,4 +1,5 @@
 .employee_index
+  br
   - if flash.notice.present?
     p
       = flash.notice
@@ -36,3 +37,5 @@
               = link_to '編集', edit_employee_path(employee), class: 'btn'
             th.btn_th
               = link_to '削除', employee_path(employee.id), method: :delete, data: { confirm: "社員「#{employee.first_name} #{employee.last_name}」を削除します。よろしいですか？" }, class: 'btn'
+          br
+  = paginate @employees
