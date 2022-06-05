@@ -11,8 +11,35 @@ OFFICE_NAME = %w[東京 仙台 大阪 福岡 大分]
 
 DEPARTMENT_NAME.each.with_index(1) { |department, i| Department.find_or_create_by(id: i, name: department) }
 OFFICE_NAME.each.with_index(1) { |office, i| Office.find_or_create_by(id: i, name: office) }
-Employee.find_or_create_by(id: 1, department_id: Department.find_by(name: '総務部').id,
-                           office_id: Office.find_by(name: '東京').id,
-                           number: '1', last_name: '山田', first_name: '太郎', account: 'yamada',
-                           password: 'hogehoge', email: 'yamada@example.co.jp', date_of_joining: '1991/4/1',
-                           employee_info_manage_auth: true, news_posting_auth: false)
+Employee.create!(
+  [
+    {
+      department_id: Department.find_by(name: '総務部').id,
+                            office_id: Office.find_by(name: '東京').id,
+                            number: '1', last_name: '山田', first_name: '太郎', account: 'yamada',
+                            password: 'hogehoge', email: 'yamada@example.co.jp', date_of_joining: '1991/4/1',
+                            employee_info_manage_auth: true, news_posting_auth: false
+    },
+    {
+      department_id: Department.find_by(name: '総務部').id,
+                            office_id: Office.find_by(name: '東京').id,
+                            number: '2', last_name: '田中', first_name: '一郎', account: 'tanaka',
+                            password: 'hugahuga', email: 'tanaka@example.co.jp', date_of_joining: '1992/4/1',
+                            employee_info_manage_auth: true, news_posting_auth: true
+    },
+    {
+      department_id: Department.find_by(name: '技術部').id,
+                            office_id: Office.find_by(name: '東京').id,
+                            number: '3', last_name: '佐藤', first_name: '二郎', account: 'sato',
+                            password: 'satosato', email: 'sato@example.co.jp', date_of_joining: '1993/4/1',
+                            employee_info_manage_auth: true, news_posting_auth: false
+    },
+    {
+      department_id: Department.find_by(name: '営業部').id,
+                            office_id: Office.find_by(name: '東京').id,
+                            number: '4', last_name: '高橋', first_name: '三郎', account: 'takahashi',
+                            password: 'takataka', email: 'takahashi@example.co.jp', date_of_joining: '1994/4/1',
+                            employee_info_manage_auth: false, news_posting_auth: true
+    }
+  ]
+)

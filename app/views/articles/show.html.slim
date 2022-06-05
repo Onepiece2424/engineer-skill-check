@@ -1,0 +1,4 @@
+.profile_space
+  p.employee_index
+    = link_to '一覧に戻る', articles_path, class: 'btn'
+  = render partial: 'article_info', locals: { article: @article }
