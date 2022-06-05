@@ -11,8 +11,21 @@ OFFICE_NAME = %w[東京 仙台 大阪 福岡 大分]
 
 DEPARTMENT_NAME.each.with_index(1) { |department, i| Department.find_or_create_by(id: i, name: department) }
 OFFICE_NAME.each.with_index(1) { |office, i| Office.find_or_create_by(id: i, name: office) }
-Employee.find_or_create_by(id: 1, department_id: Department.find_by(name: '総務部').id,
-                           office_id: Office.find_by(name: '東京').id,
-                           number: '1', last_name: '山田', first_name: '太郎', account: 'yamada',
-                           password: 'hogehoge', email: 'yamada@example.co.jp', date_of_joining: '1991/4/1',
-                           employee_info_manage_auth: true, news_posting_auth: false)
+Employee.create!(
+  [
+    {
+      department_id: Department.find_by(name: '総務部').id,
+                            office_id: Office.find_by(name: '東京').id,
+                            number: '1', last_name: '山田', first_name: '太郎', account: 'yamada',
+                            password: 'hogehoge', email: 'yamada@example.co.jp', date_of_joining: '1991/4/1',
+                            employee_info_manage_auth: true, news_posting_auth: false
+    },
+    {
+      department_id: Department.find_by(name: '総務部').id,
+                            office_id: Office.find_by(name: '東京').id,
+                            number: '2', last_name: '田中', first_name: '一郎', account: 'tanaka',
+                            password: 'hugahuga', email: 'tanaka@example.co.jp', date_of_joining: '1992/4/1',
+                            employee_info_manage_auth: true, news_posting_auth: true
+    }
+  ]
+)
