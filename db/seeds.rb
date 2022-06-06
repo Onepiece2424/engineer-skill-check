@@ -71,7 +71,7 @@ Employee.create!(
     }
   ]
 )
-10.times do |n|
+20.times do |n|
   Article.create!(
     title: "お知らせです。",
     content: "お知らせです。お知らせです。お知らせです。",
