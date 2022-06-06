@@ -40,6 +40,40 @@ Employee.create!(
                             number: '4', last_name: '高橋', first_name: '三郎', account: 'takahashi',
                             password: 'takataka', email: 'takahashi@example.co.jp', date_of_joining: '1994/4/1',
                             employee_info_manage_auth: false, news_posting_auth: true
+    },
+    {
+      department_id: Department.find_by(name: '技術部').id,
+                            office_id: Office.find_by(name: '東京').id,
+                            number: '5', last_name: '中山', first_name: '四郎', account: 'nakayama',
+                            password: 'nakayama', email: 'nakayama@example.co.jp', date_of_joining: '1994/4/1',
+                            employee_info_manage_auth: false, news_posting_auth: true
+    },
+    {
+      department_id: Department.find_by(name: '営業部').id,
+                            office_id: Office.find_by(name: '東京').id,
+                            number: '6', last_name: '相田', first_name: '五郎', account: 'aida',
+                            password: 'aidaaida', email: 'aida@example.co.jp', date_of_joining: '1994/4/1',
+                            employee_info_manage_auth: false, news_posting_auth: true
+    },
+    {
+      department_id: Department.find_by(name: '営業部').id,
+                            office_id: Office.find_by(name: '東京').id,
+                            number: '7', last_name: '木村', first_name: '六郎', account: 'kimura',
+                            password: 'kimura', email: 'kimura@example.co.jp', date_of_joining: '1994/4/1',
+                            employee_info_manage_auth: false, news_posting_auth: true
+    },
+    {
+      department_id: Department.find_by(name: '営業部').id,
+                            office_id: Office.find_by(name: '東京').id,
+                            number: '8', last_name: '鈴木', first_name: '七郎', account: 'suzuki',
+                            password: 'suzuki', email: 'suzuki@example.co.jp', date_of_joining: '1994/4/1',
+                            employee_info_manage_auth: false, news_posting_auth: true
     }
   ]
 )
+5.times do |n|
+  Article.create!(
+    title: "あいさつです。",
+    content: "こんにちは！",
+  )
+end
