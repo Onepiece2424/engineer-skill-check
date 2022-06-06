@@ -71,3 +71,9 @@ Employee.create!(
     }
   ]
 )
+5.times do |n|
+  Article.create!(
+    title: "あいさつです。",
+    content: "こんにちは！",
+  )
+end
