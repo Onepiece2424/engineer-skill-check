@@ -3,7 +3,7 @@ class EmployeesController < ApplicationController
   before_action :set_form_option, only: %i(new create edit update)
 
   def index
-    @employees = Employee.active.order("#{sort_column} #{sort_direction}")
+    @employees = Employee.page(params[:page]).per(5).active.order("#{sort_column} #{sort_direction}")
   end
 
   def new
@@ -36,19 +36,15 @@ class EmployeesController < ApplicationController
   end
 
   def destroy
-    ActiveRecord::Base.transaction do
-      now = Time.now
-      @employee.update_column(:deleted_at, now)
-      @employee.profiles.active.first.update_column(:deleted_at, now) if @employee.profiles.active.present?
-    end
-
+    @employee = Employee.find(params[:id])
+    @employee.destroy
     redirect_to employees_url, notice: "社員「#{@employee.last_name} #{@employee.first_name}」を削除しました。"
   end
 
   private
 
   def employee_params
-    params.require(:employee).permit(:number, :last_name, :first_name, :account, :password, :department_id, :office_id, :employee_info_manage_auth)
+    params.require(:employee).permit(:number, :last_name, :first_name, :account, :password, :department_id, :office_id, :employee_info_manage_auth, :news_posting_auth)
   end
 
   def set_employee
@@ -66,7 +62,7 @@ class EmployeesController < ApplicationController
       @employee.email = 'sample@example.com'
     end
     unless @employee.date_of_joining
-      @employee.date_of_joining = Date.today
+      @employee.date_of_joining = Time.zone.today
     end
   end
 

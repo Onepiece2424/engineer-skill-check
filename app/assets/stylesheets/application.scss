@@ -1,0 +1,128 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse:  collapse;
+}
+
+tr {
+  border: solid 1px;
+}
+
+.container {
+  height: 100%;
+  padding: 0 20px 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.row-center {
+  text-align: center;
+}
+
+#menu {
+  width: auto;
+  border: 1px solid;
+  font-size: 24px;
+  display: flex;
+}
+
+#menu ul {
+  padding-left: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+#menu li {
+  margin: 0 30px 0 30px;
+  float: left;
+}
+
+#dropdown_menu {
+  text-align: right;
+  font-size: 20px;
+}
+
+#dropdown_menu ul {
+  padding-left: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+#dropdown_menu li {
+  margin: 0 30px 0 30px;
+  float: left;
+}
+
+#dropdown_menu.is-open {
+  display: flex;
+  margin: 0;
+  width: auto;
+  font-size: 24px;
+}
+
+.dropdown_items {
+  border: 1px solid;
+}
+
+.left_menu, .right_menu {
+  display: inline-block;
+}
+
+.left_menu {
+  margin-right: auto;
+}
+
+.right_menu {
+  margin-left: auto;
+}
+
+.dropdown__btn {
+  font-size: 24px;
+  background: none;
+  border: 0;
+}
+
+//ページネーション
+.pagination>li>a {
+  border: none;     /*枠線をなくす*/
+  color: #696969;   /*文字の色を変える*/
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {
+  background: #93c9ff;     /*背景の色を変える*/
+  border-radius: 15px;     /*角を丸くする*/
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {
+  border-radius: 15px;    /*角を丸くする*/
+}

@@ -1,0 +1,25 @@
+.employee_index
+  p.new_employee
+    = link_to '新規追加', new_article_path, class: 'btn'
+  br
+  br
+  br
+  br
+  br
+  br
+  table.employee_table
+    thead
+      tr
+        th.name
+          | タイトル
+    tbody
+      - @articles.each do |article|
+        tr.employee
+          th.title
+            = link_to article.title, article_path(article.id)
+            = l article.created_at
+          th.title
+            = link_to "編集", edit_article_path(article.id)
+          th.title
+            = link_to "削除", article_path(article.id), method: :delete
+  = paginate @articles
