@@ -10,4 +10,6 @@
         p
           = link_to 'プロフィールを作成', new_employee_profile_path(@employee)
       - else
-        |  （プロフィールがありません） 
+        |  （プロフィールがありません）
+  br
+  = link_to "csvで出力する", new_employee_path(format: :csv)
