@@ -53,3 +53,4 @@ gem 'slim-rails'
 gem 'html2slim'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'kaminari'
+gem 'pg', group: :production
